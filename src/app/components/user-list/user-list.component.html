@@ -1,0 +1,26 @@
+<main class="userList">
+    <h1 class="userList__header">User's List</h1>
+    <div class="container">
+            <div class="container__usernamesContainer">
+                <ng-container *ngFor="let user of getUsers()">
+                    <a 
+                    class="container__usernamesContainer--text" 
+                    [routerLink]="'/user/' + user.getId()"
+                    *ngIf="user.getStatusLabel() === 'Success'">
+                        Username: {{ user.getUsername() }}
+                    </a>
+                    <span 
+                    class="container__usernamesContainer--text" 
+                    [routerLink]="'/user/' + user.getId()"
+                    *ngIf="user.getStatusLabel() !== 'Success'">
+                        Username: {{ user.getUsername() }}
+                    </span>
+                </ng-container>
+            </div>
+        <div class="container__statusesContainer">
+            <span class="container__statusesContainer--text" *ngFor="let user of getUsers()">
+                    Status: {{ user.getStatusLabel() }}
+            </span> 
+        </div>
+    </div>
+</main>

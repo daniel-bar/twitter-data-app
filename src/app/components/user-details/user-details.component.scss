@@ -1,0 +1,49 @@
+@import '../../../config.scss';
+
+.main {
+    padding: 0 map-get($sizes, minimal-padding);
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 800px;
+    padding: map-get($sizes, minimal-padding);
+
+    &__header {
+        font-size: 4rem;
+        text-align: center;
+        color: map-get($colors, twitter);
+    }
+}
+
+.userContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 40px;
+    box-shadow: 2px 2px 3px map-get($colors, twitter);
+    border-radius: 10px;
+
+    .userDetails {
+        display: flex;
+        flex-direction: column;
+
+        &__profilePic {
+            align-self: flex-start;
+            margin-left: 20px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        &__text {
+            text-align: start;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    }
+}
+    

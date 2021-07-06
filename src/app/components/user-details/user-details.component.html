@@ -1,0 +1,13 @@
+<main class="userDetails">
+    <h1 class="userDetails__header">User Details</h1>
+    <div class="userContainer">
+        <div class="userDetails">
+            <img class="userDetails__profilePic" src="{{ getUser().getProfilePictureLink() }}" alt="">
+            <span class="userDetails__text">Username: {{ getUser().getUsername() }}</span>
+            <span class="userDetails__text">Description: {{ getUser().getDescription() }}</span>
+            <span class="userDetails__text">Following: {{ getUser().getFollowingCount() }} - Followers: {{ getUser().getFollowersCount() }}</span>
+            <span class="userDetails__text">Most common word: {{ getUser().getMostCommonWord() }}</span>
+            <span class="userDetails__text">Retweets sum: {{ getUser().getRetweetsCount() }}</span>
+        </div>      
+    </div>
+</main>

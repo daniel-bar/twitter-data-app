@@ -1,0 +1,28 @@
+<main class="main">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form" formArrayName="usernames">
+            <h1 class="form__header">Twitter API application</h1>
+
+            <label class="form__label">Input twitter usernames:</label>
+            <div
+                class="innerForm"
+                *ngFor="let usernameControl of getControls(); let i = index; trackBy: trackByFunction"
+            >
+                <input 
+                    class="innerForm__usersInput"
+                    placeholder="Username"
+                    type="text"
+                    [formControlName]="i"
+                >
+            </div>
+
+            <button
+                class="form__addUserRowInput"
+                type="button"
+                (click)="onAddUser()"
+            >+ Add user input</button>
+
+            <button class="form__button" type="submit">Submit</button>
+        </div>
+    </form>
+</main>

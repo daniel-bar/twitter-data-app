@@ -1,0 +1,77 @@
+@import '../../../config.scss';
+
+:host {
+    flex: 1;
+}
+
+.main {
+    height: 100%;
+    padding: 10px map-get($sizes, minimal-padding);
+    background-color: #E1E8ED;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+
+    &__header {
+        margin-bottom: 10px;
+        font-size: 4rem;
+        text-align: center;
+        color: map-get($colors, twitter);
+    }
+
+    &__label {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__addUserRowInput {
+        transition: all .3s ease;
+        padding: 17px;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        &:hover {
+            color: #fff;
+            background-color: map-get($colors, twitter);
+        }
+    }
+         
+    &__button {
+        transition: all .3s ease;  
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 15px;
+        font-size: 2rem;
+        border: 2px solid #000;
+        color: #fff;
+        background-color: #000;
+        box-shadow: 0 3px 8px #0000003d;
+
+        &:hover {
+            color: #fff;
+            background-color: map-get($colors, twitter);
+        }
+    }   
+
+    .innerForm {
+        &__usersInput {
+            transition: all .3s ease;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 17px;
+            font-size: 1.5rem;
+            border: 2px solid  map-get($colors, border);
+            box-shadow: 0 3px 8px #0000003d;
+
+            &:focus {
+                border-color: map-get($colors, twitter);
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@import '../../../config.scss';
+
+.userList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 800px;
+    padding: map-get($sizes, minimal-padding);
+
+    &__header {
+        font-size: 4rem;
+        text-align: center;
+        color: map-get($colors, twitter);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding: 15px;
+    margin-top: 40px;
+    box-shadow: 2px 2px 3px map-get($colors, twitter);
+    border-radius: 10px;
+    
+    &__usernamesContainer { 
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+
+        &--text {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-decoration-line: none;
+            
+            &:hover {
+                color: map-get($colors, twitter);
+            }    
+        }
+    }
+
+    &__statusesContainer { 
+        display: flex;
+        flex-direction: column;
+
+        &--text {
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-decoration-line: none;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+    
+    
+    
